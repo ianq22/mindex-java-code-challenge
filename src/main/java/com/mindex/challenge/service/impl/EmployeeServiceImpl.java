@@ -66,7 +66,8 @@ public class EmployeeServiceImpl implements EmployeeService {
             while (!directReports.isEmpty()) {
                 Employee directReport = read(directReports.pop().getEmployeeId());
                 reports++;
- 
+                
+                //  If they have any reports themselves, we'll want to add those to the pile
                 if (directReport.getDirectReports() != null && !directReport.getDirectReports().isEmpty()) {
                     directReports.addAll(directReport.getDirectReports());
                 }

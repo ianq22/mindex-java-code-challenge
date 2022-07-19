@@ -6,8 +6,11 @@ import java.util.Date;
  * Tracks the salary and effective date of offers made to employees
  */
 public class Compensation {
+    /** The employee associated with a given salary */
     private Employee employee;
+    /** Total compensation for an employee */
     private Integer salary;
+    /** The date at which the given salary went into effect */
     private Date effectiveDate;
 
     public Compensation() {  

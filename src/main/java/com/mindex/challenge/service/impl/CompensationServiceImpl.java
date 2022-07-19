@@ -38,6 +38,7 @@ public class CompensationServiceImpl implements CompensationService {
         Compensation compensation = new Compensation();
         Employee employee = employeeRepository.findByEmployeeId(employeeId);
 
+        //   If we have an employee, we'll check to see if they have an associated compensation record
         if (employee != null) {
             LOG.debug("Found employee with id [{}]", employeeId);
 
